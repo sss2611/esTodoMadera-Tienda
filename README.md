@@ -76,7 +76,7 @@ Modifica static/css/styles.css o ajusta clases de Bootstrap en index.html.
 El proyecto está desplegado en Vercel directamente desde el repositorio de GitHub de la cuenta sss2611.
 👉 Puedes acceder al sitio en línea aquí:
 
-🔗 https://estodomadera-tienda.vercel.app
+🔗 https://es-todo-madera-tienda.vercel.app/
 
 📸 Capturas
 (Agrega aquí screenshots de tu tienda mostrando productos y el carrito en acción)
