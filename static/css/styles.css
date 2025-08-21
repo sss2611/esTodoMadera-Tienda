@@ -434,14 +434,14 @@ body>.card .card-body {
 
 /* Textos dentro del slide */
 .carousel-caption {
-    background: rgba(117, 50, 6, 0.993);
+    /* background: rgba(117, 50, 6, 0.993); */
     border-radius: 8px;
     padding: 10px;
 }
 
 .carousel-caption h5,
 .carousel-caption p {
-    color: #fff;
+    color: #070000;
     margin: 0;
 }
 
@@ -465,4 +465,27 @@ body>.card .card-body {
 #modalImage.zoomed {
     transform: scale(2);
     cursor: zoom-out;
+}
+
+/* Carrito */
+#cartModal .modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item span {
+    flex: 1;
+}
+
+.cart-item input {
+    width: 60px;
+    text-align: center;
 }
