@@ -144,3 +144,55 @@ scrollTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+// === Modal de imágenes con navegación y zoom ===
+const modalImages = document.querySelectorAll('.modal-trigger');
+const modalImage = document.getElementById('modalImage');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentIndex = 0;
+
+if (modalImage) {
+  modalImages.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index; // guardamos el índice
+      showImage(currentIndex);
+    });
+  });
+
+  // Mostrar imagen en el modal
+  function showImage(index) {
+    modalImage.src = modalImages[index].src;
+    const myModal = new bootstrap.Modal(document.getElementById('productModal'));
+    myModal.show();
+    modalImage.classList.remove('zoomed');
+  }
+
+  // Zoom al hacer click en la imagen
+  modalImage.addEventListener('click', () => {
+    modalImage.classList.toggle('zoomed');
+  });
+
+  // Navegación con flechas del teclado
+  document.addEventListener("keydown", (e) => {
+    if (!document.getElementById('productModal').classList.contains('show')) return;
+
+    if (e.key === "ArrowRight") {
+      currentIndex = (currentIndex + 1) % modalImages.length;
+      showImage(currentIndex);
+    } else if (e.key === "ArrowLeft") {
+      currentIndex = (currentIndex - 1 + modalImages.length) % modalImages.length;
+      showImage(currentIndex);
+    }
+  });
+
+  // Navegación con botones Prev/Next
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + modalImages.length) % modalImages.length;
+    showImage(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % modalImages.length;
+    showImage(currentIndex);
+  });
+}
