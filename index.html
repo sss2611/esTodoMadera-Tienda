@@ -14,6 +14,7 @@
     <!-- Tu CSS personalizado -->
     <link rel="stylesheet" href="static/css/styles.css">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
 
 </head>
@@ -58,155 +59,138 @@
 
     <main>
         <!-- Productos -->
-        <section id="productos" class="productos">
+        <section id="productos" class="productos container py-4">
 
             <!-- RACKS -->
             <h2>Racks</h2>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <!-- Indicadores -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-
-                <!-- Slides -->
+            <div id="carouselRacks" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="static/img/productos/racks/1.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt=" 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5> 1</h5>
-                            <p> de madera maciza.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="static/img/productos/racks/2.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt=" 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5> 2</h5>
-                            <p> moderno con vidrio.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="static/img/productos/racks/3.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt=" 3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5> 3</h5>
-                            <p> elegante para tu sala.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- MESAS -->
-            <h2>Mesas</h2>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <!-- Indicadores -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-
-                <!-- Slides -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active text-center">
                         <img src="static/img/productos/racks/1.jpg" class="d-block w-100 carousel-img modal-trigger"
                             alt="Rack 1">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5> 1</h5>
-                            <p> de madera maciza.</p>
+                            <h5>Rack 1</h5>
+                            <p>de madera maciza.</p>
                         </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Rack 1" data-price="50000">Agregar
+                            al carrito</button>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item text-center">
                         <img src="static/img/productos/racks/2.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt=" 2">
+                            alt="Rack 2">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5> 2</h5>
-                            <p> moderno con vidrio.</p>
+                            <h5>Rack 2</h5>
+                            <p>moderno con vidrio.</p>
                         </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Rack 2" data-price="60000">Agregar
+                            al carrito</button>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item text-center">
                         <img src="static/img/productos/racks/3.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt=" 3">
+                            alt="Rack 3">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5> 3</h5>
-                            <p> elegante para tu sala.</p>
+                            <h5>Rack 3</h5>
+                            <p>elegante para tu sala.</p>
                         </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Rack 3" data-price="70000">Agregar
+                            al carrito</button>
                     </div>
                 </div>
             </div>
 
+            <!-- MESAS -->
+            <h2 class="mt-4">Mesas</h2>
+            <div id="carouselMesas" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <img src="static/img/productos/mesas/1.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Mesa 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mesa 1</h5>
+                            <p>de madera maciza.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mesa 1" data-price="30000">Agregar
+                            al carrito</button>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="static/img/productos/mesas/2.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Mesa 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mesa 2</h5>
+                            <p>moderna con vidrio.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mesa 2" data-price="35000">Agregar
+                            al carrito</button>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="static/img/productos/mesas/3.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Mesa 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mesa 3</h5>
+                            <p>elegante para tu sala.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mesa 3" data-price="40000">Agregar
+                            al carrito</button>
+                    </div>
+                </div>
+            </div>
 
             <!-- MUEBLES -->
-            <h2>Muebles</h2>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <!-- Indicadores -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-
-                <!-- Slides -->
+            <h2 class="mt-4">Muebles</h2>
+            <div id="carouselMuebles" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="static/img/productos/racks/1.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt=" 1">
+                    <div class="carousel-item active text-center">
+                        <img src="static/img/productos/muebles/1.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Mueble 1">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Mueble 1</h5>
-                            <p>Mueble de madera maciza.</p>
+                            <p>de madera maciza.</p>
                         </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mueble 1" data-price="80000">Agregar
+                            al carrito</button>
                     </div>
-                    <div class="carousel-item">
-                        <img src="static/img/productos/racks/2.jpg" class="d-block w-100 carousel-img modal-trigger"
+                    <div class="carousel-item text-center">
+                        <img src="static/img/productos/muebles/2.jpg" class="d-block w-100 carousel-img modal-trigger"
                             alt="Mueble 2">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Mueble 2</h5>
-                            <p>Mueble moderno con vidrio.</p>
+                            <p>moderno con vidrio.</p>
                         </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mueble 2" data-price="90000">Agregar
+                            al carrito</button>
                     </div>
-                    <div class="carousel-item">
-                        <img src="static/img/productos/racks/3.jpg" class="d-block w-100 carousel-img modal-trigger"
+                    <div class="carousel-item text-center">
+                        <img src="static/img/productos/muebles/3.jpg" class="d-block w-100 carousel-img modal-trigger"
                             alt="Mueble 3">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Mueble 3</h5>
-                            <p>Mueble elegante para tu sala.</p>
+                            <p>elegante para tu sala.</p>
                         </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mueble 3" data-price="95000">Agregar
+                            al carrito</button>
                     </div>
                 </div>
             </div>
-
-
         </section>
 
-        <aside id="promociones" class="bg-light p-3 rounded shadow">
+        <!-- Promociones -->
+        <aside id="promociones" class="bg-light p-3 rounded shadow container mt-4">
             <h3>Promoción Especial</h3>
             <div class="promo-card">
                 <div class="promo-image">
                     <img src="static/img/promos/1.jpeg" class="promo-image modal-trigger" alt="Producto en promoción">
-                    <span class="old-price">ANTES $50.00</span>
+                    <span class="old-price">ANTES $50.000</span>
                     <br>
-                    <span class="new-price">AHORA $35.00</span>
+                    <span class="new-price">AHORA $35.000</span>
                 </div>
                 <div class="promo-body">
                     <h5>Producto en Promoción</h5>
                     <p>Descripción breve de la promoción.</p>
+                    <button class="btn btn-success add-to-cart" data-name="Promo Especial" data-price="35000">Agregar al
+                        carrito</button>
                 </div>
             </div>
         </aside>
-
     </main>
 
     <footer class="bg-dark text-white text-center py-3 mt-auto">
@@ -232,29 +216,44 @@
         </div>
     </footer>
 
+    <!-- Botón flotante del carrito -->
+    <button id="cartButton"
+        class="btn btn-warning position-fixed bottom-0 end-0 m-4 rounded-circle shadow position-relative"
+        data-bs-toggle="modal" data-bs-target="#cartModal">
+        <i class="fas fa-shopping-cart"></i>
+        <!-- Contador del carrito -->
+        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+        </span>
+    </button>
 
-    <!-- Modal para mostrar imagen completa -->
-    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-body p-0 position-relative">
-                    <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                    <img id="modalImage" src="" alt="Producto" class="img-fluid modal-img">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="cartItems">
+                    <p>Tu carrito está vacío.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" id="checkoutBtn">Finalizar Compra en WhatsApp</button>
                 </div>
             </div>
         </div>
     </div>
 
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Tu JS personalizado -->
-    <script src="static/js/main.js"></script>
-
+    <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- Tu JS personalizado -->
+    <script src="static/js/main.js"></script>
 
 </body>
 
