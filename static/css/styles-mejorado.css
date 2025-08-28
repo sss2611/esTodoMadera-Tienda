@@ -1,0 +1,170 @@
+/* 🎨 Variables de color */
+:root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --muted: #99a1b3;
+    --text: #e8ecf2;
+    --brand: #ffb703;
+    --brand2: #fb8500;
+    --line: #232733;
+    --ok: #25D366;
+    --danger: #ef4444;
+}
+
+/* 🌍 Base */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 🔝 Navbar */
+.navbar {
+    background: linear-gradient(90deg, var(--panel) 0%, #111 100%);
+    border-bottom: 1px solid var(--line);
+}
+.navbar-brand {
+    font-weight: 700;
+    color: var(--brand) !important;
+}
+.navbar-nav .nav-link {
+    color: var(--text) !important;
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--brand2) !important;
+}
+#navCartBtn {
+    background: var(--brand2);
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+#navCartBtn:hover {
+    transform: scale(1.05);
+    background: var(--brand);
+}
+
+/* 🎡 Carousel */
+.carousel-container {
+    background: #000;
+}
+.promo-content {
+    min-height: 85vh;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+}
+.promo-image {
+    max-height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+.old-price {
+    font-size: 0.9rem;
+}
+.new-price {
+    color: var(--brand);
+    text-shadow: 0 0 6px rgba(255,183,3,0.6);
+}
+
+/* 🛒 Botones */
+.btn-tertiary {
+    background: var(--brand2);
+    border: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.btn-tertiary:hover {
+    background: var(--brand);
+    transform: translateY(-2px);
+}
+.btn-primary {
+    background: var(--brand);
+    border: none;
+    font-weight: 600;
+}
+.btn-primary:hover {
+    background: var(--brand2);
+}
+
+/* 📦 Cards de productos */
+.card {
+    border: none;
+    border-radius: 15px;
+    background: var(--panel);
+    color: var(--text);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card img {
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    height: 200px;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+.card-title {
+    color: var(--brand);
+}
+
+/* 📍 Footer */
+footer {
+    background: linear-gradient(180deg, #111, var(--panel));
+}
+footer h5 {
+    color: var(--brand);
+    font-weight: 700;
+}
+footer p, footer a {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+footer a:hover {
+    color: var(--brand2);
+}
+
+/* 🗺️ Mapa */
+.map-container {
+    border: 2px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* 🔘 Botón carrito flotante */
+#cartButton {
+    width: 60px;
+    height: 60px;
+    background: var(--brand2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+#cartButton:hover {
+    transform: scale(1.1);
+    background: var(--brand);
+}
+
+/* 🔝 Scroll top */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    background: var(--brand);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+#scrollTopBtn:hover {
+    background: var(--brand2);
+    transform: translateY(-3px);
+}

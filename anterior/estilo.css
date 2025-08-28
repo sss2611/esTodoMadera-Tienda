@@ -1,0 +1,214 @@
+:root {
+    --primary-color: #5d4037;
+    --secondary-color: #f8f5f2;
+    --accent-color: #6c9a77;
+    --tertiary-color: #795548;
+    --text-color: #3e2723;
+    --light-text: #fff;
+    --font-family-serif: 'Georgia', serif;
+    --font-family-sans: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: #558b5e;
+    border-color: #558b5e;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-tertiary {
+    background-color: var(--tertiary-color);
+    border-color: var(--tertiary-color);
+}
+
+.btn-tertiary:hover {
+    background-color: #6d4c41;
+    border-color: #6d4c41;
+}
+
+.bg-dark {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--tertiary-color) !important;
+}
+
+.text-primary {
+    color: var(--accent-color) !important;
+}
+
+.navbar-brand {
+    font-family: var(--font-family-serif);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--light-text);
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--light-text);
+}
+
+.header-image-full {
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+}
+
+.header-image-full img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 250px;
+    cursor: pointer;
+}
+
+.card-body h5 {
+    font-family: var(--font-family-serif);
+}
+
+.promo-card .old-price,
+.promo-card .new-price {
+    display: block;
+    text-align: center;
+}
+
+.promo-card .new-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.map-container {
+    height: 200px;
+}
+
+#cartButton {
+    z-index: 1050;
+    transform: scale(1.1);
+    transition: transform 0.3s;
+    background-color: var(--accent-color) !important;
+}
+
+#cartButton .fa-shopping-cart {
+    color: var(--light-text);
+}
+
+#cartButton:hover {
+    transform: scale(1.2);
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+    transform: translateY(-5px);
+}
+
+/* Modals */
+.modal-content {
+    border: none;
+}
+
+.modal-header {
+    background-color: var(--primary-color) !important;
+    color: var(--light-text) !important;
+    border-bottom: none;
+}
+
+.modal-body p {
+    color: #666;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-body img {
+    max-height: 80vh;
+}
+
+/* Nuevo estilo para el slider de promociones */
+.carousel-container {
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-image {
+    width: 200px; /* Tamaño de la imagen del producto en el slider */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.promo-content {
+    min-height: 400px; /* Altura mínima para el contenido del slider */
+    padding: 2rem 1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--text-color);
+    border-radius: 50%;
+    padding: 1.5rem;
+}
+

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esTodoMadera...</title>
+    <meta name="description" content="Descripción de mi página web">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/ES-CIRC.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <!-- Botón de hamburguesa -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#promociones">Promociones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productos">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#redes">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ubicacion">Ubicación</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Imagen debajo del navbar -->
+        <div class="header-image">
+            <img src="static/img/ES-CIRC.png" alt="Imagen Header">
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Productos -->
+        <section id="productos" class="productos container py-4">
+
+            <!-- RACKS -->
+            <h2>Racks</h2>
+            <div id="carouselRacks" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <img src="static/img/productos/racks/1.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Rack 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Rack 1</h5>
+                            <p>de madera maciza.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Rack 1" data-price="50000">Agregar
+                            al carrito</button>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="static/img/productos/racks/2.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Rack 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Rack 2</h5>
+                            <p>moderno con vidrio.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Rack 2" data-price="60000">Agregar
+                            al carrito</button>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="static/img/productos/racks/3.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Rack 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Rack 3</h5>
+                            <p>elegante para tu sala.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Rack 3" data-price="70000">Agregar
+                            al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MESAS -->
+            <h2 class="mt-4">Mesas</h2>
+            <div id="carouselMesas" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <img src="static/img/productos/mesas/1.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Mesa 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mesa 1</h5>
+                            <p>de madera maciza.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mesa 1" data-price="30000">Agregar
+                            al carrito</button>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="static/img/productos/mesas/2.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Mesa 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mesa 2</h5>
+                            <p>moderna con vidrio.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mesa 2" data-price="35000">Agregar
+                            al carrito</button>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="static/img/productos/mesas/3.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Mesa 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mesa 3</h5>
+                            <p>elegante para tu sala.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mesa 3" data-price="40000">Agregar
+                            al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MUEBLES -->
+            <h2 class="mt-4">Muebles</h2>
+            <div id="carouselMuebles" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <img src="static/img/productos/muebles/1.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Mueble 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mueble 1</h5>
+                            <p>de madera maciza.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mueble 1" data-price="80000">Agregar
+                            al carrito</button>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="static/img/productos/muebles/2.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Mueble 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mueble 2</h5>
+                            <p>moderno con vidrio.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mueble 2" data-price="90000">Agregar
+                            al carrito</button>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="static/img/productos/muebles/3.jpg" class="d-block w-100 carousel-img modal-trigger"
+                            alt="Mueble 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mueble 3</h5>
+                            <p>elegante para tu sala.</p>
+                        </div>
+                        <button class="btn btn-primary add-to-cart my-2" data-name="Mueble 3" data-price="95000">Agregar
+                            al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promociones -->
+        <aside id="promociones" class="bg-light p-3 rounded shadow container mt-4">
+            <h3>Promoción Especial</h3>
+            <div class="promo-card">
+                <div class="promo-image">
+                    <img src="static/img/promos/1.jpeg" class="promo-image modal-trigger" alt="Producto en promoción">
+                    <span class="old-price">ANTES $50.000</span>
+                    <br>
+                    <span class="new-price">AHORA $35.000</span>
+                </div>
+                <div class="promo-body">
+                    <h5>Producto en Promoción</h5>
+                    <p>Descripción breve de la promoción.</p>
+                    <button class="btn btn-success add-to-cart" data-name="Promo Especial" data-price="35000">Agregar al
+                        carrito</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p>&copy; 2025 esTodoMadera... Todos los derechos reservados.</p>
+
+        <!-- Iframe de Google Maps -->
+        <div id="ubicacion" class="map-container mb-3">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d441.1695123895619!2d-64.2590085!3d-27.7988078!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b5315626ea601%3A0xf24ec161700ba6a8!2sESTODOMADERA!5e0!3m2!1ses!2sar!4v1755565929185!5m2!1ses!2sar"
+                width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <!-- Redes sociales -->
+        <div id="redes" class="redes-container">
+            <ul>
+                <li><a href="https://www.facebook.com/estodomadera" class="facebook"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/estodomadera/" class="instagram"><i
+                            class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Botón flotante del carrito -->
+    <button id="cartButton"
+        class="btn btn-warning position-fixed bottom-0 end-0 m-4 rounded-circle shadow position-relative"
+        data-bs-toggle="modal" data-bs-target="#cartModal">
+        <i class="fas fa-shopping-cart"></i>
+        <!-- Contador del carrito -->
+        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+        </span>
+    </button>
+
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="cartItems">
+                    <p>Tu carrito está vacío.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" id="checkoutBtn">Finalizar Compra en WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Producto -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark text-center">
+                <div class="modal-body position-relative">
+                    <img id="modalImage" src="" class="img-fluid" alt="Producto">
+
+                    <!-- Botón Prev -->
+                    <button id="prevBtn" class="btn btn-dark position-absolute top-50 start-0 translate-middle-y">
+                        <i class="fas fa-chevron-left fa-2x"></i>
+                    </button>
+
+                    <!-- Botón Next -->
+                    <button id="nextBtn" class="btn btn-dark position-absolute top-50 end-0 translate-middle-y">
+                        <i class="fas fa-chevron-right fa-2x"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón Scroll to Top -->
+    <button id="scrollTopBtn" class="btn btn-dark rounded-circle shadow">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Tu JS personalizado -->
+    <script src="static/js/main.js"></script>
+
+</body>
+
+</html>

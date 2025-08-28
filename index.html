@@ -8,13 +8,10 @@
     <meta name="description" content="Descripción de mi página web">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/img/ES-CIRC.png" />
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Tu CSS personalizado -->
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/styles-mejorado.css">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
 
 </head>
@@ -24,7 +21,11 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <!-- Botón de hamburguesa -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="static/img/ES-CIRC.png" alt="Logo" width="40" height="40" class="me-2 rounded-circle">
+                    esTodoMadera...
+                </a>
+
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -45,241 +46,261 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#ubicacion">Ubicación</a>
                         </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <button id="navCartBtn" class="btn btn-tertiary text-white ms-3" data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+                                <i class="fas fa-shopping-cart me-1"></i> Carrito
+                                <span id="cartCountNav" class="badge rounded-pill bg-danger">0</span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <!-- Imagen debajo del navbar -->
-        <div class="header-image">
-            <img src="static/img/ES-CIRC.png" alt="Imagen Header">
-        </div>
+        <section id="promociones" class="carousel-container">
+            <div id="promoCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="promo-content d-flex flex-column justify-content-center align-items-center text-center text-white">
+                            <h2 class="display-4 fw-bold mb-3">Promoción Especial</h2>
+                            <img src="static/img/promos/1.jpeg" class="promo-image mb-4" alt="Promoción 1">
+                            <h5 class="fw-bold">Producto en Promoción</h5>
+                            <p class="fs-5">Descripción breve de la promoción.</p>
+                            <span class="old-price text-muted text-decoration-line-through fs-6">$50.000</span>
+                            <span class="new-price text-danger fs-3 fw-bold mb-3">$35.000</span>
+                            <button class="btn btn-tertiary btn-lg add-to-cart" data-name="Promo Especial 1" data-price="35000">Comprar ahora</button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="promo-content d-flex flex-column justify-content-center align-items-center text-center text-white">
+                            <h2 class="display-4 fw-bold mb-3">¡Oferta Semanal!</h2>
+                            <img src="static/img/productos/racks/2.jpg" class="promo-image mb-4" alt="Promoción 2">
+                            <h5 class="fw-bold">Rack 2</h5>
+                            <p class="fs-5">¡El mejor para tu sala!</p>
+                            <span class="old-price text-muted text-decoration-line-through fs-6">$60.000</span>
+                            <span class="new-price text-danger fs-3 fw-bold mb-3">$45.000</span>
+                            <button class="btn btn-tertiary btn-lg add-to-cart" data-name="Promo Especial 2" data-price="45000">Comprar ahora</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
     </header>
 
+    <main class="flex-grow-1">
+        <section id="productos" class="productos container py-5">
+            <h2 class="text-center mb-4">Nuestros Productos</h2>
 
-    <main>
-        <!-- Productos -->
-        <section id="productos" class="productos container py-4">
-
-            <!-- RACKS -->
-            <h2>Racks</h2>
-            <div id="carouselRacks" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active text-center">
-                        <img src="static/img/productos/racks/1.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt="Rack 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Rack 1</h5>
-                            <p>de madera maciza.</p>
+            <h3 class="mt-4 mb-3">Racks</h3>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="static/img/productos/racks/1.jpg" class="card-img-top carousel-img modal-trigger" alt="Rack 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Rack 1</h5>
+                            <p class="card-text">De madera maciza.</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-name="Rack 1" data-price="50000">Agregar al carrito</button>
                         </div>
-                        <button class="btn btn-primary add-to-cart my-2" data-name="Rack 1" data-price="50000">Agregar
-                            al carrito</button>
                     </div>
-                    <div class="carousel-item text-center">
-                        <img src="static/img/productos/racks/2.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt="Rack 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Rack 2</h5>
-                            <p>moderno con vidrio.</p>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="static/img/productos/racks/2.jpg" class="card-img-top carousel-img modal-trigger" alt="Rack 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Rack 2</h5>
+                            <p class="card-text">Moderno con vidrio.</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-name="Rack 2" data-price="60000">Agregar al carrito</button>
                         </div>
-                        <button class="btn btn-primary add-to-cart my-2" data-name="Rack 2" data-price="60000">Agregar
-                            al carrito</button>
                     </div>
-                    <div class="carousel-item text-center">
-                        <img src="static/img/productos/racks/3.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt="Rack 3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Rack 3</h5>
-                            <p>elegante para tu sala.</p>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="static/img/productos/racks/3.jpg" class="card-img-top carousel-img modal-trigger" alt="Rack 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Rack 3</h5>
+                            <p class="card-text">Elegante para tu sala.</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-name="Rack 3" data-price="70000">Agregar al carrito</button>
                         </div>
-                        <button class="btn btn-primary add-to-cart my-2" data-name="Rack 3" data-price="70000">Agregar
-                            al carrito</button>
                     </div>
                 </div>
             </div>
 
-            <!-- MESAS -->
-            <h2 class="mt-4">Mesas</h2>
-            <div id="carouselMesas" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active text-center">
-                        <img src="static/img/productos/mesas/1.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt="Mesa 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Mesa 1</h5>
-                            <p>de madera maciza.</p>
+            <h3 class="mt-5 mb-3">Mesas</h3>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="static/img/productos/mesas/1.jpg" class="card-img-top carousel-img modal-trigger" alt="Mesa 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mesa 1</h5>
+                            <p class="card-text">De madera maciza.</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-name="Mesa 1" data-price="30000">Agregar al carrito</button>
                         </div>
-                        <button class="btn btn-primary add-to-cart my-2" data-name="Mesa 1" data-price="30000">Agregar
-                            al carrito</button>
                     </div>
-                    <div class="carousel-item text-center">
-                        <img src="static/img/productos/mesas/2.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt="Mesa 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Mesa 2</h5>
-                            <p>moderna con vidrio.</p>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="static/img/productos/mesas/2.jpg" class="card-img-top carousel-img modal-trigger" alt="Mesa 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mesa 2</h5>
+                            <p class="card-text">Moderna con vidrio.</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-name="Mesa 2" data-price="35000">Agregar al carrito</button>
                         </div>
-                        <button class="btn btn-primary add-to-cart my-2" data-name="Mesa 2" data-price="35000">Agregar
-                            al carrito</button>
                     </div>
-                    <div class="carousel-item text-center">
-                        <img src="static/img/productos/mesas/3.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt="Mesa 3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Mesa 3</h5>
-                            <p>elegante para tu sala.</p>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="static/img/productos/mesas/3.jpg" class="card-img-top carousel-img modal-trigger" alt="Mesa 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mesa 3</h5>
+                            <p class="card-text">Elegante para tu sala.</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-name="Mesa 3" data-price="40000">Agregar al carrito</button>
                         </div>
-                        <button class="btn btn-primary add-to-cart my-2" data-name="Mesa 3" data-price="40000">Agregar
-                            al carrito</button>
                     </div>
                 </div>
             </div>
 
-            <!-- MUEBLES -->
-            <h2 class="mt-4">Muebles</h2>
-            <div id="carouselMuebles" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active text-center">
-                        <img src="static/img/productos/muebles/1.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt="Mueble 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Mueble 1</h5>
-                            <p>de madera maciza.</p>
+            <h3 class="mt-5 mb-3">Muebles</h3>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="static/img/productos/muebles/1.jpg" class="card-img-top carousel-img modal-trigger" alt="Mueble 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mueble 1</h5>
+                            <p class="card-text">De madera maciza.</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-name="Mueble 1" data-price="80000">Agregar al carrito</button>
                         </div>
-                        <button class="btn btn-primary add-to-cart my-2" data-name="Mueble 1" data-price="80000">Agregar
-                            al carrito</button>
                     </div>
-                    <div class="carousel-item text-center">
-                        <img src="static/img/productos/muebles/2.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt="Mueble 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Mueble 2</h5>
-                            <p>moderno con vidrio.</p>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="static/img/productos/muebles/2.jpg" class="card-img-top carousel-img modal-trigger" alt="Mueble 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mueble 2</h5>
+                            <p class="card-text">Moderno con vidrio.</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-name="Mueble 2" data-price="90000">Agregar al carrito</button>
                         </div>
-                        <button class="btn btn-primary add-to-cart my-2" data-name="Mueble 2" data-price="90000">Agregar
-                            al carrito</button>
                     </div>
-                    <div class="carousel-item text-center">
-                        <img src="static/img/productos/muebles/3.jpg" class="d-block w-100 carousel-img modal-trigger"
-                            alt="Mueble 3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Mueble 3</h5>
-                            <p>elegante para tu sala.</p>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm text-center">
+                        <img src="static/img/productos/muebles/3.jpg" class="card-img-top carousel-img modal-trigger" alt="Mueble 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mueble 3</h5>
+                            <p class="card-text">Elegante para tu sala.</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-name="Mueble 3" data-price="95000">Agregar al carrito</button>
                         </div>
-                        <button class="btn btn-primary add-to-cart my-2" data-name="Mueble 3" data-price="95000">Agregar
-                            al carrito</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Promociones -->
-        <aside id="promociones" class="bg-light p-3 rounded shadow container mt-4">
-            <h3>Promoción Especial</h3>
-            <div class="promo-card">
-                <div class="promo-image">
-                    <img src="static/img/promos/1.jpeg" class="promo-image modal-trigger" alt="Producto en promoción">
-                    <span class="old-price">ANTES $50.000</span>
-                    <br>
-                    <span class="new-price">AHORA $35.000</span>
-                </div>
-                <div class="promo-body">
-                    <h5>Producto en Promoción</h5>
-                    <p>Descripción breve de la promoción.</p>
-                    <button class="btn btn-success add-to-cart" data-name="Promo Especial" data-price="35000">Agregar al
-                        carrito</button>
+        <!-- <section id="promociones" class="bg-primary p-5 my-5">
+            <div class="container text-center">
+                <h2 class="text-white mb-4">Promoción Especial</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-lg h-100">
+                            <img src="static/img/promos/1.jpeg" class="card-img-top modal-trigger" alt="Producto en promoción">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Producto en Promoción</h5>
+                                <p class="card-text">Descripción breve de la promoción.</p>
+                                <span class="old-price text-muted text-decoration-line-through">$50.000</span>
+                                <span class="new-price text-danger fs-4 fw-bold mb-3">$35.000</span>
+                                <button class="btn btn-tertiary mt-auto add-to-cart" data-name="Promo Especial" data-price="35000">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </aside>
+        </section> -->
     </main>
 
-    <footer class="bg-dark text-white text-center py-3 mt-auto">
-        <p>&copy; 2025 esTodoMadera... Todos los derechos reservados.</p>
-
-        <!-- Iframe de Google Maps -->
-        <div id="ubicacion" class="map-container mb-3">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d441.1695123895619!2d-64.2590085!3d-27.7988078!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b5315626ea601%3A0xf24ec161700ba6a8!2sESTODOMADERA!5e0!3m2!1ses!2sar!4v1755565929185!5m2!1ses!2sar"
-                width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-
-        <!-- Redes sociales -->
-        <div id="redes" class="redes-container">
-            <ul>
-                <li><a href="https://www.facebook.com/estodomadera" class="facebook"><i
-                            class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com/estodomadera/" class="instagram"><i
-                            class="fab fa-instagram"></i></a></li>
-            </ul>
+    <footer class="bg-dark text-white text-center py-5 mt-auto">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white">Ubicación</h5>
+                    <div id="ubicacion" class="map-container rounded overflow-hidden shadow-sm">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.7314742838385!2d-64.26941408485295!3d-31.558359481358327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329b19e2c65775%3A0xc3f5b08c9f6a5b9c!2sC.%20Padre%20Luis%20Monti%20310%2C%20B%C2%B0%20Jardines%20del%20Sur%2C%20X5000HHC%2C%20C%C3%B3rdoba!5e0!3m2!1sen!2sar!4v1628173428987!5m2!1sen!2sar"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white">Contacto</h5>
+                    <p class="mb-1">Tel: +54 9 11 1234-5678</p>
+                    <p class="mb-1">Email: info@estodomadera.com</p>
+                    <div id="redes" class="redes-container mt-3">
+                        <a href="https://www.facebook.com/estodomadera" class="social-icon text-white me-3"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="https://www.instagram.com/estodomadera/" class="social-icon text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-muted mt-4 mb-0">&copy; 2025 esTodoMadera... Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Botón flotante del carrito -->
-    <button id="cartButton"
-        class="btn btn-warning position-fixed bottom-0 end-0 m-4 rounded-circle shadow position-relative"
+    <button id="cartButton" class="btn btn-tertiary position-fixed bottom-0 end-0 m-4 rounded-circle shadow d-lg-none"
         data-bs-toggle="modal" data-bs-target="#cartModal">
-        <i class="fas fa-shopping-cart"></i>
-        <!-- Contador del carrito -->
+        <i class="fas fa-shopping-cart text-white"></i>
         <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             0
         </span>
     </button>
 
-
-    <!-- Modal del Carrito -->
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-dark text-white">
                     <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body" id="cartItems">
                     <p>Tu carrito está vacío.</p>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-success" id="checkoutBtn">Finalizar Compra en WhatsApp</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+                    <button class="btn btn-success" id="checkoutBtn"><i class="fab fa-whatsapp me-2"></i>Finalizar Compra</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal de Producto -->
     <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark text-center">
-                <div class="modal-body position-relative">
-                    <img id="modalImage" src="" class="img-fluid" alt="Producto">
-
-                    <!-- Botón Prev -->
-                    <button id="prevBtn" class="btn btn-dark position-absolute top-50 start-0 translate-middle-y">
-                        <i class="fas fa-chevron-left fa-2x"></i>
-                    </button>
-
-                    <!-- Botón Next -->
-                    <button id="nextBtn" class="btn btn-dark position-absolute top-50 end-0 translate-middle-y">
-                        <i class="fas fa-chevron-right fa-2x"></i>
-                    </button>
+            <div class="modal-content bg-transparent border-0 text-center">
+                <div class="modal-body position-relative p-0">
+                    <img id="modalImage" src="" class="img-fluid rounded" alt="Producto">
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Botón Scroll to Top -->
-    <button id="scrollTopBtn" class="btn btn-dark rounded-circle shadow">
+    <button id="scrollTopBtn" class="btn btn-dark rounded-circle shadow d-none d-lg-block">
         <i class="fas fa-arrow-up"></i>
     </button>
 
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Tu JS personalizado -->
     <script src="static/js/main.js"></script>
 
 </body>
