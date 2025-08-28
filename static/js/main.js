@@ -93,7 +93,7 @@ document.getElementById("checkoutBtn").addEventListener("click", () => {
     const total = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
     message += `%0A💰 *Total:* $${total.toLocaleString()}`;
 
-    const phone = "5491112345678"; // <-- coloca aquí tu número real con código de país
+    const phone = "5493854864263";
     const url = `https://wa.me/${phone}?text=${message}`;
 
     window.open(url, "_blank");
